@@ -19,4 +19,14 @@ describe Game do
     expect(game.suit_cards[0].split(',')).to include("Ace Heart", "Two Heart", "Three Heart", "Four Heart", "Five Heart")
   end
 
+  it 'respond to method complete_deck_order' do
+    expect(game).to respond_to(:shuffle_deck)
+  end
+
+  it 'deck cards should not be in the correct order (first 5 cards) when shuffled' do
+    game.complete_deck_order
+    game.shuffle_deck
+    expect(game.suit_cards[0].split(',').slice(0,5)).to eq(["Ace Heart", "Two Heart", "Three Heart", "Four Heart", "Five Heart"])
+  end
+
 end

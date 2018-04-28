@@ -15,8 +15,31 @@ class Game
     deck_order
   end
 
+  def shuffle_deck
+    shuffle_cards
+  end
+
 private
 
+def shuffle_cards
+  @shuffled_cards << "#{add_names_shuffled(" Spades").slice(0,3).join(", ")},
+  #{add_names_shuffled(" Diamonds").slice(3,14).join(", ")},
+  #{add_names_shuffled(" Clubs").slice(0,3).join(", ")},
+  #{add_names_shuffled(" Hearts").slice(0,3).join(", ")},
+  #{add_names_shuffled(" Clubs").slice(3,14).join(", ")},
+  #{add_names_shuffled(" Diamonds").slice(0,3).join(", ")},
+  #{add_names_shuffled(" Spades").slice(3,14).join(", ")},
+  #{add_names_shuffled(" Hearts").slice(3,14).join(", ")}".delete("\n")
+
+  @shuffled_cards = @shuffled_cards[0].split(", ")
+  @shuffled_cards_left = @shuffled_cards
+end
+
+def add_names_shuffled(suit_name)
+  @names_shuffled.map do |name|
+    name + suit_name
+  end
+end
 
 def add_names(suit_name)
   @names.map do |name|
