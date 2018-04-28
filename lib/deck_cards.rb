@@ -26,9 +26,9 @@ class Game
 private
 
 def deal_cards_player
-  @player_cards = @shuffled_cards_left.sample(7)
-  @shuffled_cards_left -=  @player_cards
-  @players_cards_total << @player_cards
+  player_cards = @shuffled_cards_left.sample(7)
+  @shuffled_cards_left -=  player_cards
+  @players_cards_total << player_cards
 end
 
 def shuffle_cards
