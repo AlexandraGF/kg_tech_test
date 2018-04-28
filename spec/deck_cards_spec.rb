@@ -14,4 +14,9 @@ describe Game do
     expect((game.complete_deck_order).size).to eq(52)
   end
 
+  it 'deck cards should be in the correct order (first 5 cards)' do
+    game.complete_deck_order
+    expect(game.suit_cards[0].split(',')).to include("Ace Heart", "Two Heart", "Three Heart", "Four Heart", "Five Heart")
+  end
+
 end
