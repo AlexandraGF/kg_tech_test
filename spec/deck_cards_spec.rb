@@ -40,4 +40,11 @@ describe Game do
     expect((game.shuffled_cards_left).size).to eq(24)
   end
 
+  it 'after deal the cards to the players, sa player should have 7 cards' do
+    game.complete_deck_order
+    game.shuffle_deck
+    game.deal_cards_game(4)
+    expect(game.players_cards_total[0].size).to eq(7)
+  end
+
 end
