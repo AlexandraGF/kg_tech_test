@@ -1,4 +1,5 @@
 require './lib/deck_cards.rb'
+require './spec/spec_helpers.rb'
 
 describe Game do
   subject(:game) {described_class.new}
@@ -24,8 +25,7 @@ describe Game do
   end
 
   it 'deck cards should not be in the correct order (first 5 cards) when shuffled' do
-    game.complete_deck_order
-    game.shuffle_deck
+    shuffle
     expect(game.suit_cards[0].split(',').slice(0,5)).to eq(["Ace Heart", "Two Heart", "Three Heart", "Four Heart", "Five Heart"])
   end
 
@@ -34,23 +34,17 @@ describe Game do
   end
 
   it 'after deal the cards to the players, shuffled cards left should be fewer' do
-    game.complete_deck_order
-    game.shuffle_deck
-    game.deal_cards_game(4)
+    deal_cards
     expect((game.shuffled_cards_left).size).to eq(24)
   end
 
   it 'after deal the cards to the players, the player should have 7 cards' do
-    game.complete_deck_order
-    game.shuffle_deck
-    game.deal_cards_game(4)
+    deal_cards
     expect(game.players_cards_total[0].size).to eq(7)
   end
 
   it 'after deal the cards to the players, the player should have the exact 7 cards given' do
-    game.complete_deck_order
-    game.shuffle_deck
-    game.deal_cards_game(1)
+    deal_cards
     game_cards = game.players_cards_total[0]
     expect(game_cards).to eq(game.players_cards_total[0])
   end
