@@ -10,4 +10,8 @@ describe Game do
     expect(game).to respond_to(:complete_deck_order)
   end
 
+  it 'suit_cards should have all cards' do
+    expect((game.complete_deck_order).size).to eq(52)
+  end
+
 end

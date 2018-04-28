@@ -12,6 +12,23 @@ class Game
   end
 
   def complete_deck_order
+    deck_order
   end
+
+private
+
+
+def add_names(suit_name)
+  @names.map do |name|
+    name + suit_name
+  end
+end
+
+def deck_order
+  @suit_cards << "#{add_names(" Heart").join(",")},#{add_names(" Clubs").join(",")},
+  #{add_names(" Spades").join(",")},#{add_names(" Diamonds").join(",")}"
+
+  @suit_cards[0].split(",")
+end
 
 end
