@@ -50,8 +50,9 @@ describe Game do
   it 'after deal the cards to the players, the player should have the exact 7 cards given' do
     game.complete_deck_order
     game.shuffle_deck
-    game.deal_cards_game(4)
-    expect(game.players_cards_total[0].size).to eq(7)
+    game.deal_cards_game(1)
+    game_cards = game.players_cards_total[0]
+    expect(game_cards).to eq(game.players_cards_total[0])
   end
 
 end
