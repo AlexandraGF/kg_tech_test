@@ -29,4 +29,15 @@ describe Game do
     expect(game.suit_cards[0].split(',').slice(0,5)).to eq(["Ace Heart", "Two Heart", "Three Heart", "Four Heart", "Five Heart"])
   end
 
+  it 'respond to method deal_cards_game with 1 argument' do
+    expect(game).to respond_to(:deal_cards_game).with(1).argument
+  end
+
+  it 'after deal the cards to the players, shuffled cards left should be fewer' do
+    game.complete_deck_order
+    game.shuffle_deck
+    game.deal_cards_game(4)
+    expect((game.shuffled_cards_left).size).to eq(24)
+  end
+
 end

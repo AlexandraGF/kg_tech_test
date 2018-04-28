@@ -19,7 +19,17 @@ class Game
     shuffle_cards
   end
 
+  def deal_cards_game(number_players)
+    number_players.times { deal_cards_player }
+  end
+
 private
+
+def deal_cards_player
+  @player_cards = @shuffled_cards_left.sample(7)
+  @shuffled_cards_left -=  @player_cards
+  @players_cards_total << @player_cards
+end
 
 def shuffle_cards
   @shuffled_cards << "#{add_names_shuffled(" Spades").slice(0,3).join(", ")},
