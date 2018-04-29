@@ -69,3 +69,9 @@ game.deal_cards_game(4)  (you enter a number of player, for example 4, and then 
 
 ![alt tag](public/photo1.png)
 ![alt tag](public/photo2.png)
+
+## Tests running green
+
+On your terminal, type ``` rspec ``` and the tests will run.
+
+![alt tag](public/Tests running.png)
