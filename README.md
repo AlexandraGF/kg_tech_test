@@ -29,6 +29,14 @@ As a user
 So I can play the game with other players
 I want to be able to deal 7 cards to each player.
 ```
+## My approach on solving the Scenario
+
+- I have decided to use Ruby language as it is easier to be run from the command line
+- I have used Rspec to test the application and make sure the test are all green
+- I used Game class and with the help from complete_deck_order method, I could put all the cards in the correct order at the start of the game; then shuffle_deck method to shuffle the cards, so no two cards are in sequence; and deal_cards_game method in the end to deal each player 7 cards and the number of the player can be changed from one game to another.
+- I have used a couple of private methods to help the public methods (that were tested with Rspec) to not have two many lines of code.  
+- I have used the variable @suit_cards to store all the ordered cards, @shuffled_cards to store the shuffled cards, @shuffled_cards_left to store the remaining shuffled cards to be played, @players_cards_total to store 7 shuffled cards to each player.  
+
 
 ## Run the deck cards game
 
