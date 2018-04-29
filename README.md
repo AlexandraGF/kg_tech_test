@@ -45,7 +45,7 @@ I want to be able to deal 7 cards to each player.
 git clone git@github.com:AlexandraGF/kg_tech_test.git
 ```
 
-2. Change directory by typing ```cd kg_tech_test``` and then  ``` bundle ```
+2. Change directory by typing ```cd kg_tech_test``` and then type ``` bundle ```
 
 3. Open IRB by typing ```irb``` on you terminal.
 
@@ -72,6 +72,9 @@ game.deal_cards_game(4)  (you enter a number of player, for example 4, and then 
 7. Type ``` game.shuffled_cards_left ``` to see the number of cards left to play.
 
 8. When you want to finish the session, type ```exit``` on your terminal
+
+### If you download the game as a zip folder, change directory to where you copied the zip folder (for example on desktop) from the terminal by typing ``` cd desktop/kg_tech_test-master ``` and then type ``` bundle ```
+### After this, you can follow steps 3 - 8 from above.
 
 ## Screenshoot from running the game in the terminal:
 
