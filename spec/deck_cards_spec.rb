@@ -3,6 +3,7 @@ require './spec/spec_helpers.rb'
 
 describe Game do
   subject(:game) {described_class.new}
+  
   it 'Game should be initialised with empty suit_cards array' do
     expect(game.suit_cards).to eq([])
   end
