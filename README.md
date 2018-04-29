@@ -46,7 +46,7 @@ git clone git@github.com:AlexandraGF/kg_tech_test.git
 require './lib/deck_cards.rb'
 ```
 ```
-game = Game.new (you start with a new game)
+game = Game.new (you start a new game)
 ```
 ```
 game.complete_deck_order (you make sure all the cards are in the correct order at the start of the game)
@@ -61,8 +61,11 @@ game.deal_cards_game(4)  (you enter a number of player, for example 4, and then 
 
 6. Type ``` game.shuffled_cards_left ``` to see the remaining cards that can be played.
 
-7. When you want to finish the session, type ```exit``` on your terminal
+7. Type ``` game.shuffled_cards_left ``` to see the number of cards left to play.
+
+8. When you want to finish the session, type ```exit``` on your terminal
 
 ## Screenshoot from running the game in the terminal:
 
-![alt tag]()
+![alt tag](public/photo1.png)
+![alt tag](public/photo2.png)
