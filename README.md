@@ -74,4 +74,4 @@ game.deal_cards_game(4)  (you enter a number of player, for example 4, and then 
 
 On your terminal, type ``` rspec ``` and the tests will run.
 
-![alt tag](public/Tests running.png)
+![alt tag](public/tests_running.png)
